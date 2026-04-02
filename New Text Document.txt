@@ -1,0 +1,125 @@
+#include <iostream>
+using namespace std;
+double addition(double num1, double num2)
+{
+    double sum = 0;
+    sum = num1 + num2;
+
+    return sum;
+}
+
+double subtraction(double num1, double num2)
+{
+    double sub = 0;
+    sub = num1 - num2;
+    return sub;
+}
+
+double multiplication(double num1, double num2)
+{
+
+    double mul = 0;
+    mul = num1 * num2;
+    return mul;
+}
+double division(double num1, double num2)
+{
+
+    double div = 0;
+
+    div = num1 / num2;
+
+    return div;
+}
+
+int main()
+{
+    cout << "Enter operation:\n";
+    cout << "a or A : Addition\n";
+    cout << "s or S : Subtraction\n";
+    cout << "m or M : Multiplication\n";
+    cout << "d or D : Division\n";
+    cout << "o or O : All operations\n";
+    cout << "q or Q :Quit\n ";
+    cout << endl;
+    cout << "Your choice: ";
+    double x;
+    double y;
+    char h;
+    while (cin >> h)
+    {
+
+        if (h == 'a' || h == 'A')
+        {
+            cin >> x;
+            cin >> y;
+            cout << x << " + " << y << " = " << addition(x, y) << endl;
+
+            cout << "----------------- \n";
+            cout << "Your choice: ";
+        }
+
+        else if (h == 's' || h == 'S')
+        {
+            cin >> x;
+            cin >> y;
+            cout << x << " - " << y << " = " << subtraction(x, y) << endl;
+
+            cout << "----------------- \n";
+            cout << "Your choice: ";
+        }
+
+        else if (h == 'm' || h == 'M')
+        {
+            cin >> x;
+            cin >> y;
+            cout << x << " * " << y << " = " << multiplication(x, y) << endl;
+            cout << "-----------------\n ";
+            cout << "Your choice: ";
+        }
+
+        else if (h == 'd' || h == 'D')
+        {
+            cin >> x;
+            cin >> y;
+            cout << x << " / " << y << " = " << division(x, y) << endl;
+            cout << "----------------- \n";
+            cout << "Your choice: ";
+        }
+        else if (h == 'o' || h == 'O')
+        {
+            cin >> x;
+            cin >> y;
+            cout << x << " + " << y << " = " << addition(x, y) << endl;
+            cout << x << " - " << y << " = " << subtraction(x, y) << endl;
+            cout << x << " * " << y << " = " << multiplication(x, y) << endl;
+            cout << x << " / " << y << " = " << division(x, y) << endl;
+            cout << "-----------------\n ";
+            cout << "Your choice: ";
+        }
+        else if (h == 'q' || h == 'Q')
+        {
+            break;
+        }
+        else
+        {
+            int i = 3;
+            while (i > 0)
+            {
+                cout << "try again ";
+                cout << i << " tries left!\n";
+                cin >> h;
+
+                i--;
+                if (i == 0)
+                {
+                    cout << "You're really pushing it... " << "0" << " tries left." << endl;
+
+                    system("pause");
+                    return 0;
+                }
+            }
+        }
+    }
+}
+//task1 بطريقة احترافية !!الطالب محمد علاء الحايك 
